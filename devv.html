@@ -1,81 +1,132 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="file:///D:/form/devv1.css">
-    <title>card</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter Card</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0e5d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.c {
+  width: 400px;
+  height: 500px;
+  perspective: 1500px;
+}
+
+.i {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(0);
+  transition: transform 1s ease-in-out;
+}
+
+.c:hover .i {
+  transform: rotateY(180deg);
+}
+
+.x, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.x {
+  background-color: #ffadad;
+  color: white;
+}
+
+.x h1 {
+  font-size: 2.5em;
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+}
+
+.x p {
+  font-size: 1.2em;
+}
+
+.card-back {
+  background-color: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.card-back .message p {
+  font-size: 1.4em;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.devuu {
+  font-style: italic;
+  font-size: 1.2em;
+  color: #e63946;
+  margin-top: 20px;
+}
+
+.x p {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+  </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <input type="radio" name="slide" id="c1">
-            <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon">1</div>
-                    <div class="description">
-                        <h4>dev</h4>
-                        <p>hellllllllllllll iiii, ammmmmmmmmmmm devvvvvvvvvvv....</p>
-                    </div>
-                </div>
-            </label>
-
-            <input type="radio" name="slide" id="c2">
-            <label for="c2" class="card">
-                <div class="row">
-                    <div class="icon">2</div>
-                    <div class="description">
-                        <h4>shreya</h4>
-                        <p>hellllllllllllll iiii, ammmmmmmmmmmm devvvvvvvvvvv....</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c3">
-            <label for="c3" class="card">
-                <div class="row">
-                    <div class="icon">3</div>
-                    <div class="description">
-                        <h4>prakash</h4>
-                        <p>hellllllllllllll iiii, ammmmmmmmmmmm devvvvvvvvvvv....</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c4">
-            <label for="c4" class="card">
-                <div class="row">
-                    <div class="icon">4</div>
-                    <div class="description">
-                        <h4>alpita</h4>
-                        <p>hellllllllllllll iiii, ammmmmmmmmmmm devvvvvvvvvvv....</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c5">
-            <label for="c5" class="card">
-                <div class="row">
-                    <div class="icon">5</div>
-                    <div class="description">
-                        <h4>vanshika</h4>
-                        <p>hellllllllllllll iiii, ammmmmmmmmmmm devvvvvvvvvvv....</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c6">
-            <label for="c6" class="card">
-                <div class="row">
-                    <div class="icon">6</div>
-                    <div class="description">
-                        <h4>ratanbaa</h4>
-                        <p>hellllllllllllll iiii, ammmmmmmmmmmm devvvvvvvvvvv....</p>
-                    </div>
-                </div>
-            </label>
-
+  <div class="c">
+    <div class="i">
+      <div class="x">
+        <h1>Dear charu 💌</h1>
+        <p>Click to open my heart</p>
+      </div>
+      <div class="card-back">
+        <div class="message">
+          <p>My Dearest,</p>
+          <p>Every moment with you is magical. Your love fills my heart in ways words cannot express. Forever yours,</p>
+          <p class="devuu">❤️ [dev]</p>
         </div>
+      </div>
     </div>
+  </div>
+
+  <script>
+document.querySelector('.c').addEventListener('click', function() {
+  alert('A love letter awaits you!"charu" 💌');
+});
+
+  </script>
 </body>
-
-
-
-
-
-
 </html>
