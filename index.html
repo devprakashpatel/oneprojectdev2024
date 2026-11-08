@@ -1,136 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Sweetu Didi</title>
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 25%, #fbc2eb 50%, #a6c1ee 100%);
-      overflow: hidden;
-    }
-
-    .confetti {
-      position: absolute;
-      width: 12px;
-      height: 18px;
-      opacity: 0.9;
-      animation: fall 5s linear infinite;
-      border-radius: 4px;
-    }
-
-    @keyframes fall {
-      0% {
-        transform: translateY(-100vh) rotate(0deg);
-        opacity: 0;
-      }
-      10% { opacity: 1; }
-      100% {
-        transform: translateY(100vh) rotate(540deg);
-        opacity: 0;
-      }
-    }
-
-    .card {
-      position: relative;
-      z-index: 1;
-      width: min(90vw, 700px);
-      padding: 48px 30px;
-      text-align: center;
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 20px 60px rgba(129, 78, 145, 0.35);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.45);
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.35);
-      color: #4f1d5a;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.5rem, 5vw, 5rem);
-      color: #4b0d4a;
-      text-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-    }
-
-    h2 {
-      margin: 12px 0 18px;
-      font-size: clamp(1.8rem, 3vw, 3rem);
-      color: #e650a0;
-    }
-
-    p {
-      font-size: clamp(1rem, 2vw, 1.4rem);
-      line-height: 1.7;
-      color: #4a1d46;
-      margin: 16px auto;
-      max-width: 600px;
-    }
-
-    .cake {
-      font-size: clamp(3rem, 6vw, 5rem);
-      margin: 18px 0;
-      animation: bounce 1.5s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-
-    .sign {
-      margin-top: 18px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #5d1c64;
-      letter-spacing: 0.05em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raj Drug and Surgical - trusted pharmaceutical and surgical supplies.">
+    <title>Mangalam Drugs & Surgical | Trusted Healthcare Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <div class="tag">🎉 Birthday Special 🎉</div>
-    <h1>Happy Birthday</h1>
-    <h2>Sweetu Didi</h2>
-    <p>
-      May your day be full of laughter, love, happiness, and beautiful memories.
-      You deserve all the joy in the world and more. Stay smiling, stay shining,
-      and keep inspiring everyone around you.
-    </p>
-    <div class="cake">🎂</div>
-    <p>Wishing you a year filled with success, peace, and endless blessings 💖</p>
-    <div class="sign">With love and warm wishes</div>
-  </div>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="contact-strip">
+                <span>Serving healthcare with trust</span>
+                <a href="tel:+919924511486">+91 99245 11486</a>
+            </div>
+            <nav class="utility-nav" aria-label="Utility navigation">
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <script>
-    const colors = ['#ff5ea8', '#ffd166', '#06d6a0', '#4cc9f0', '#c77dff', '#ff9f1c'];
+    <header class="main-header" id="home">
+        <div class="container nav-wrap">
+            <a class="brand" href="#home" aria-label="Mangalam Drugs and Surgical home">
+                <span class="brand-mark">
+                    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 4h8v16h16v8H28v16h-8V28H4v-8h16z"/></svg>
+                </span>
+                <span>
+                    <strong>Mangalam Drugs</strong>
+                    <small>&amp; Surgical</small>
+                </span>
+            </a>
 
-    for (let i = 0; i < 70; i++) {
-      const confetti = document.createElement('div');
-      confetti.className = 'confetti';
-      confetti.style.left = Math.random() * 100 + 'vw';
-      confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-      confetti.style.animationDelay = (Math.random() * 5) + 's';
-      confetti.style.animationDuration = (Math.random() * 3 + 4) + 's';
-      confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
-      document.body.appendChild(confetti);
-    }
-  </script>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <a class="active" href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="btn btn-outline nav-cta" href="#contact">Send Enquiry</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-pattern"></div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow"><span></span> Trusted Pharma & Surgical Partner</p>
+                    <h1>Quality Healthcare.<br><em>Delivered with Care.</em></h1>
+                    <p class="hero-copy">Reliable medicines and surgical supplies, sourced responsibly and delivered efficiently for hospitals, clinics, pharmacies and healthcare professionals.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#products">Explore Products <span aria-hidden="true">→</span></a>
+                        <a class="phone-link" href="tel:+919924511486">
+                            <span class="phone-icon">☎</span>
+                            <span><small>Call us now</small><strong>+91 99245 11486</strong></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrap">
+                    <div class="image-accent"></div>
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=85" alt="Pharmacist arranging healthcare medicines">
+                    <div class="quality-card">
+                        <span class="quality-icon">✓</span>
+                        <span><strong>100% Genuine</strong><small>Quality assured products</small></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-bar" aria-label="Company highlights">
+            <div class="container trust-grid">
+                <div><strong>8+</strong><span>Years of Experience</span></div>
+                <div><strong>2,500+</strong><span>Products Available</span></div>
+                <div><strong>500+</strong><span>Distribution</span></div>
+                <div><strong>24/7</strong><span>Customer Support</span></div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="about-images">
+                    <img class="about-main" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=85" alt="Healthcare professional in a clinic">
+                    <div class="experience-badge"><strong id="experience-years">8</strong><span>Years of<br>Trust</span></div>
+                </div>
+                <div class="about-content">
+                    <p class="section-kicker">About Mangalam Drugs & Surgical</p>
+                    <h2>Committed to Better Health, <em>Every Day</em></h2>
+                    <p>Mangalam Drugs & Surgical is a dependable source for medicines, surgical instruments, medical consumables and healthcare essentials. We combine reliable sourcing with responsive service.</p>
+                    <div class="feature-list">
+                        <div><span>01</span><p><strong>Genuine Products</strong><small>Verified and quality-assured medicines.</small></p></div>
+                        <div><span>02</span><p><strong>Reliable Distribution</strong><small>Safe, timely and organized delivery.</small></p></div>
+                        <div><span>03</span><p><strong>Customer First</strong><small>Personal support for every requirement.</small></p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section products-section" id="products">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="section-kicker">Our Products</p><h2>Healthcare Essentials</h2></div>
+                    <div class="product-tabs" role="tablist" aria-label="Product categories">
+                        <button class="active" type="button" data-filter="all">All</button>
+                        <button type="button" data-filter="medicine">Medicine</button>
+                        <button type="button" data-filter="surgical">++++++</button>
+                        <button type="button" data-filter="wellness">++++++</button>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card" data-category="medicine"><div class="product-visual medicine-bg">Rx</div><h3>Pharmaceuticals</h3><p>Prescription medicines and OTC healthcare essentials.</p><a href="#contact">Enquire now →</a></article>
+                    <article class="product-card" data-category="surgical"><div class="product-visual surgical-bg">+</div><h3>Surgical Equipment</h3><p>Reliable instruments and supplies for medical professionals.</p><a href="#contact">Enquire now →</a></article>
+                    <article class="product-card" data-category="surgical"><div class="product-visual consumable-bg">●</div><h3>Medical Consumables</h3><p>Gloves, masks, bandages and essential daily consumables.</p><a href="#contact">Enquire now →</a></article>
+                    <article class="product-card" data-category="wellness"><div class="product-visual wellness-bg">♡</div><h3>Health & Wellness</h3><p>Nutrition, wellness and preventive healthcare products.</p><a href="#contact">Enquire now →</a></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-heading centered">
+                    <div><p class="section-kicker">Why Choose Us</p><h2>Built Around Your Needs</h2></div>
+                </div>
+                <div class="service-grid">
+                    <article><span>01</span><h3>Bulk Supply</h3><p>Dependable bulk orders for hospitals, clinics and pharmacies.</p></article>
+                    <article><span>02</span><h3>Fast Delivery</h3><p>Efficient dispatch and timely delivery across your area.</p></article>
+                    <article><span>03</span><h3>Expert Support</h3><p>Friendly assistance with products, availability and ordering.</p></article>
+                    <article><span>04</span><h3>Secure Packaging</h3><p>Careful handling and safe packaging for every order.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-inner">
+                <div><p>Looking for a reliable healthcare supplier?</p><h2>Let’s discuss your requirements.</h2></div>
+                <a class="btn btn-light" href="#contact">Get in Touch <span>→</span></a>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-kicker">Contact Us</p>
+                    <h2>We’re Here to Help</h2>
+                    <p>Send us your requirement and our team will get back to you promptly.</p>
+                    <ul class="contact-list">
+                        <li><strong>Call</strong><a href="tel:+919924511486">+91 99245 11486</a></li>
+                        <li><strong>Email</strong><a href="mangalamds2017@gmail.com">mangalamds2017@gmail.com</a></li>
+                        <li><strong>Address</strong><span>Cellar, Valkeshwar Flats, Ghatlodia, Ahmedabad-380061(Gujrat) INDIA</span></li>
+                    </ul>
+                </div>
+                <form class="contact-form" id="enquiry-form">
+                    <div class="form-row"><label>Name<input type="text" name="name" placeholder="Your name" required></label><label>Phone<input type="tel" name="phone" placeholder="Your phone number" required></label></div>
+                    <label>Email<input type="email" name="email" placeholder="Your email address"></label>
+                    <label>Requirement<textarea name="message" rows="4" placeholder="Tell us what you need" required></textarea></label>
+                    <button class="btn btn-primary" type="submit">Send Enquiry <span>→</span></button>
+                    <p class="form-status" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand brand-light" href="#home"><span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 4h8v16h16v8H28v16h-8V28H4v-8h16z"/></svg></span><span><strong>Mangalam Drugs</strong><small>&amp; Surgical</small></span></a>
+                <p>Trusted medicines and surgical supplies for a healthier community.</p>
+            </div>
+            <div><h3>Quick Links</h3><a href="#about">About Us</a><a href="#products">Products</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+            <div><h3>Business Hours</h3><p>Monday – Saturday<br><strong>9:00 AM – 8:00 PM</strong></p><p>Sunday<br><strong>10:00 AM – 2:00 PM</strong></p></div>
+        </div>
+        <div class="container footer-bottom"><span>© <span id="current-year"></span> Mangalam Drugs & Surgical. All rights reserved.</span><span>Healthcare with Trust</span></div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
